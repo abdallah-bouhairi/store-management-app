@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.app-container.light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.app-container.dark {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar.light { background-color: #ffffff; }
+.navbar.dark { background-color: #1f1f1f; border-color: #333; }
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.app-container.dark .product-card {
+  border-color: #333;
+  background-color: #1e1e1e;
+}
+
+.product-image {
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+}
+
+.app-container.dark .footer, .app-container.dark .navbar {
+  border-color: #333;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clear-btn {
+  background-color: #dc3545;
+  margin-top: 1rem;
+}
+
+.clear-btn:hover {
+  background-color: #a71d2a;
+}
+
+.newsletter-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.newsletter-box form {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.newsletter-box input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
