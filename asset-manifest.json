@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/abdallah-bouhairi/store-management-app/static/css/main.89a58cdd.css",
+    "main.js": "/abdallah-bouhairi/store-management-app/static/js/main.c62842d7.js",
+    "index.html": "/abdallah-bouhairi/store-management-app/index.html",
+    "main.89a58cdd.css.map": "/abdallah-bouhairi/store-management-app/static/css/main.89a58cdd.css.map",
+    "main.c62842d7.js.map": "/abdallah-bouhairi/store-management-app/static/js/main.c62842d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89a58cdd.css",
+    "static/js/main.c62842d7.js"
+  ]
+}
